@@ -5,6 +5,49 @@ made available by [Ausgrid](http://www.ausgrid.com.au/)
 (an Australian electric utility which owns and operates the distribution grid
 in Sidney and nearby areas in New South Wales, cf. their [network area map](https://www.ausgrid.com.au/network_area)).
 
+## Dataset exploration
+
+The dataset if quite rich, with records from 300 customers, with 2-3 channels for each customer:
+
+1. "GG": PV production
+2. "GC": electricity consumption
+3. "CL": offpeak-controlled consumption (for some customers only).
+
+Preliminary exploration is in [Solar home exploration.ipynb](Solar home exploration.ipynb). This notebook includes:
+
+* how to read the orginal csv yearly files
+* how to reshape the data in nicer "timeseries-friendly" format:
+
+  * columns are customer/channel (using `pandas.MultiIndex`)
+  * rows are the records for each datetime (regular sampling every 30 minutes)
+
+
+### Slicing the dataset
+
+Thanks to this (not so trivial) reshaping, it gets easy to access slices of the data (cf. code in the notebook).
+
+* Slicing example 1: all the three measurement channels for a given customer:
+
+![Customer 1 in July 2011](./Customer 1 2011-07 01-03.png)
+
+* Slicing example 2: extract the PV production channel for a set of customers (here 3 randomly chosen customers):
+
+![PV production in July 2011 for 3 customers](./PV production 2011-07 01-03.png)
+
+
+### Dataset statistics
+
+Finally, the notebook contains many statistics about the production (e.g. yield of PV production), the consumption ("size" of the customers), and the correlation of those. Main stats:
+
+* Most PV systems are between 1 and 2 kWp (80 %). Biggest is 10 kWp
+* Peak consumption of each customer is between 3 and 11 kW. Biggest is 15 kW. The energy to peak load ratio is between 600 and 1300 hours/year (average 1000 h). A few above 1500 h/y.
+
+A crude attempt to relate the correlation of PV production accross sites as a function of distance is also provided:
+
+
+![Correlation of PV production vs distance](./PV corr distance.png)
+
+
 ### Postcode location
 
 The location of each record is given by a postcode only.
