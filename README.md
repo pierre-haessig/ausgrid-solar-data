@@ -15,6 +15,8 @@ Python code to locate these postcodes.
 It uses [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start).
 Map plotting is done with [cartopy](http://scitools.org.uk/cartopy/).
 
+The result of this location analysis is stored in the CSV table [postcodes.csv](postcodes/postcodes.csv).
+
 Extracted from this notebook, here is an overview of the locations of the postcodes present in the dataset (in Australia, NSW).
 Red rectangles are the boundaries of each postcode, as returned by Google maps
 (small in urban areas along the coast, gigantic otherwise):
