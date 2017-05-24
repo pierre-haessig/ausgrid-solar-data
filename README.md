@@ -28,11 +28,11 @@ Thanks to this (not so trivial) reshaping, it gets easy to access slices of the 
 
 * Slicing example 1: all the three measurement channels for a given customer:
 
-![Customer 1 in July 2011](./Customer 1 2011-07 01-03.png)
+![Customer 1 in July 2011](./Customer%201%202011-07%2001-03.png)
 
 * Slicing example 2: extract the PV production channel for a set of customers (here 3 randomly chosen customers):
 
-![PV production in July 2011 for 3 customers](./PV production 2011-07 01-03.png)
+![PV production in July 2011 for 3 customers](./PV%20production%202011-07%2001-03.png)
 
 
 ### Dataset statistics
@@ -45,7 +45,7 @@ Finally, the notebook contains many statistics about the production (e.g. yield 
 A crude attempt to relate the correlation of PV production accross sites as a function of distance is also provided:
 
 
-![Correlation of PV production vs distance](./PV corr distance.png)
+![Correlation of PV production vs distance](./PV%20corr%20distance.png)
 
 
 ### Postcode location
