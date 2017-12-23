@@ -15,19 +15,40 @@ csv_fpath = {
     '2012-2013': os.path.join('data', 'Solar home 2012-2013.csv'),
 }
 
-def read_csv(year):
+cache_fpath = {
+    '2010-2011': os.path.join('data', 'Solar home 2010-2011.pickle.gz'),
+    '2011-2012': os.path.join('data', 'Solar home 2011-2012.pickle.gz'),
+    '2012-2013': os.path.join('data', 'Solar home 2012-2013.pickle.gz'),
+}
+
+def read_csv(year, use_cache=True):
     """Read original CSV files of the Solar Home Electricity dataset.
 
     Returns a raw DataFrame, that is with same shape as in the CSV file.
     It can be further processed by `reshape`.
 
     Notice: due to non ISO timestamp format + dataset reshaping,
-    it takes about 1 min to read the file.
+    it takes about 1 min to read the file. Therefore a automatic caching
+    mechanism is provided (pickled DataFrame) to accelerate subsequent calls
     """
     fpath = csv_fpath[year]
+    cpath = cache_fpath[year]
+    
+    if use_cache: # read cached DataFrame
+        try:
+             df_raw = pd.read_pickle(cpath, compression='gzip')
+             return df_raw
+        except:
+            print('Unable to load cached file! Fall back to parsing CSV.')
+    
+    # else parse the original CSV file
     df_raw = pd.read_csv(fpath, skiprows=1,
                 parse_dates=['date'], dayfirst=True,
                 na_filter=False, dtype={'Row Quality': str})
+    
+    if use_cache: # save DataFrame for subsequent calls
+        df_raw.to_pickle(cpath, compression='gzip')
+
     return df_raw
 
 
@@ -71,6 +92,7 @@ def reshape(df_raw):
                 missing_records.append((c,ch, len(ts)))
             else:
                 df[c, ch] = ts
+    missing_records = pd.DataFrame(missing_records, columns=['Customer', 'Channel', 'data_len'])
     # unit conversion (kWh on 30 min) → kW
     df *= 2
     return df, missing_records
