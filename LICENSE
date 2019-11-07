@@ -14,3 +14,10 @@ including the name of the creator and a link to the repository
 
 Notice that the “Solar home electricity data” itself **belongs to Ausgrid**
 and is not covered by this license.
+
+Finally, if reusing the dataset in an academic context, it may be fair citing
+the article published by the original creators of the dataset:
+E. L. Ratnam, S. R. Weller, C. M. Kellett, and A. T. Murray,
+“Residential load and rooftop PV generation: an Australian distribution network dataset,”
+International Journal of Sustainable Energy, vol. 36, no. 8, pp. 787–806, 2017.
+DOI: 10.1080/14786451.2015.1100196

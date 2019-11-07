@@ -1,9 +1,16 @@
 # Ausgrid - Solar home electricity data
 
-Personal repository on the analysis of the [Solar home electricity dataset](http://www.ausgrid.com.au/Common/About-us/Corporate-information/Data-to-share/Solar-home-electricity-data.aspx),
+Personal repository on the analysis of the [Solar home electricity dataset](https://www.ausgrid.com.au/Industry/Our-Research/Data-to-share/Solar-home-electricity-data),
 made available by [Ausgrid](http://www.ausgrid.com.au/)
 (an Australian electric utility which owns and operates the distribution grid
 in Sidney and nearby areas in New South Wales, cf. their [network area map](https://www.ausgrid.com.au/network_area)).
+
+This work is available under a [CC BY 4.0 license](LICENSE).
+
+A detailed description of the dataset is available in the article published by the original creators of the dataset:
+E. L. Ratnam, S. R. Weller, C. M. Kellett, and A. T. Murray, “Residential load and rooftop PV generation: an Australian distribution network dataset,” *International Journal of Sustainable Energy*, 2017. DOI: [10.1080/14786451.2015.1100196](https://doi.org/10.1080/14786451.2015.1100196)
+
+Notice that there is no link between the authors of the dataset and me (Pierre Haessig) the author of this analysis. I am just very grateful they made this great dataset available. I have used a subset of this data in my [Solar home control bench](https://github.com/pierre-haessig/solarhome-control-bench/) project.
 
 ## Dataset exploration
 
@@ -71,7 +78,7 @@ Solar home electricity dataset is available as 4 zip archives, 60 MB in total.
 See download links below.
 Also, each archive contains additional notes about the data.
 
-*Dataset description text cited from Ausgrid [dataset webpage](http://www.ausgrid.com.au/Common/About-us/Corporate-information/Data-to-share/Solar-home-electricity-data.aspx),
+*Dataset description text cited from Ausgrid [dataset webpage](https://www.ausgrid.com.au/Industry/Our-Research/Data-to-share/Solar-home-electricity-data),
 accessed April 2017:*
 
 > We are sharing solar home electricity data to help with analysis by
@@ -109,11 +116,13 @@ accessed April 2017:*
 #### Download:
 
 * 1 July 2012 to 30 June 2013:
-  [20122013 Solar home electricity data v2.zip](http://www.ausgrid.com.au/%7E/media/Files/About%20Us/Sharing%20Information/20122013%20Solar%20home%20electricity%20data%20v2.zip), 15 MB, 64 MB unzipped.
+  [2012-2013 Solar home electricity data.zip](https://www.ausgrid.com.au/-/media/Documents/Data-to-share/Solar-home-electricity-data/Solar-home-half-hour-data---1-July-2012-to-30-June-2013.zip)
 * 1 July 2011 to 30 June 2012:
-  [20112012 Solar home electricity data v2](http://www.ausgrid.com.au/%7E/media/Files/About%20Us/Sharing%20Information/20112012%20Solar%20home%20electricity%20data%20v2.zip), 15 MB, 64 MB unzipped.
+  [2011-2012 Solar home electricity data.zip](https://www.ausgrid.com.au/-/media/Documents/Data-to-share/Solar-home-electricity-data/Solar-home-half-hour-data---1-July-2011-to-30-June-2012.zip)
 * 1 July 2010 to 30 June 2011:
-  [Ausgrid solar home electricity data 201011 new.zip](http://www.ausgrid.com.au/%7E/media/Files/About%20Us/Sharing%20Information/Ausgrid%20solar%20home%20electricity%20data%20201011%20new.zip), 15 MB, 64 MB unzipped.
+  [2010-2011 Solar home electricity data.zip](https://www.ausgrid.com.au/-/media/Documents/Data-to-share/Solar-home-electricity-data/Solar-home-half-hour-data---1-July-2010-to-30-June-2011.zip)
+
+each file is about 15 MB zipped, 64 MB unzipped
 
 ### b) Solar home monthly data
 
@@ -127,4 +136,4 @@ accessed April 2017:*
 
 #### Download:
 
-* [Solar home monthly data  2007 to 2014.ZIP](http://www.ausgrid.com.au/%7E/media/Files/About%20Us/Sharing%20Information/Solar%20home%20monthly%20data%20%202007%20to%202014.ZIP), 15 MB, 70 MB unzipped
+* [Solar home monthly data  2007 to 2014.ZIP](https://www.ausgrid.com.au/-/media/Documents/Data-to-share/Solar-home-electricity-data/Solar-home-monthly-data--2007-to-2014.ZIP), 15 MB, 70 MB unzipped
