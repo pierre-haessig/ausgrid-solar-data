@@ -12,6 +12,8 @@ E. L. Ratnam, S. R. Weller, C. M. Kellett, and A. T. Murray, “Residential load
 
 Notice that there is no link between the authors of the dataset and me (Pierre Haessig) the author of this analysis. I am just very grateful they made this great dataset available. I have used a subset of this data in my [Solar home control bench](https://github.com/pierre-haessig/solarhome-control-bench/) project.
 
+[May 2026 update: **download link** to a self-hosted copy of the dataset, no longer available on Ausgrid website: https://pierreh.eu/downloads/Ausgrid_solar_home_data.zip]
+
 ## Dataset exploration
 
 The dataset if quite rich, with records from 300 customers, with 2-3 channels for each customer:
